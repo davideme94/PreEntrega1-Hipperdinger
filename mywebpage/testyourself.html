@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Quiz - Verb to Be</title>
+    <link rel="stylesheet" href="stylequiz.css"> 
+</head>
+<body>
+    <div class="navbar">
+        <a href="home.html" class="nav-item">🏠 Home</a>
+        <a href="videos.html" class="nav-item">🎥 Videos</a>
+        <a href="webresources.html" class="nav-item">🔗 Web Resources</a>
+        <a href="testyourself.html" class="nav-item">✏️ Mini Quiz</a> 
+        <a href="aboutme.html" class="nav-item">🧑‍💻 About Me</a>
+    </div>
+
+    <div class="container">
+        <h1>Mini Quiz: Verb to Be</h1>
+
+        <form id="quizForm">
+            <div class="question">
+                1. He ___ a doctor.
+                <br>
+                <input type="radio" name="question1" value="is"> is<br>
+                <input type="radio" name="question1" value="are"> are<br>
+                <input type="radio" name="question1" value="am"> am<br>
+            </div>
+
+            <div class="question">
+                2. They ___ at home.
+                <br>
+                <input type="radio" name="question2" value="is"> is<br>
+                <input type="radio" name="question2" value="are"> are<br>
+                <input type="radio" name="question2" value="am"> am<br>
+            </div>
+
+            <div class="question">
+                3. I ___ a student.
+                <br>
+                <input type="radio" name="question3" value="is"> is<br>
+                <input type="radio" name="question3" value="are"> are<br>
+                <input type="radio" name="question3" value="am"> am<br>
+            </div>
+
+            <div class="question">
+                4. She ___ very happy today.
+                <br>
+                <input type="radio" name="question4" value="is"> is<br>
+                <input type="radio" name="question4" value="are"> are<br>
+                <input type="radio" name="question4" value="am"> am<br>
+            </div>
+
+            <div class="question">
+                5. We ___ best friends.
+                <br>
+                <input type="radio" name="question5" value="is"> is<br>
+                <input type="radio" name="question5" value="are"> are<br>
+                <input type="radio" name="question5" value="am"> am<br>
+            </div>
+
+            <div class="question">
+                6. You ___ from England.
+                <br>
+                <input type="radio" name="question6" value="is"> is<br>
+                <input type="radio" name="question6" value="are"> are<br>
+                <input type="radio" name="question6" value="am"> am<br>
+            </div>
+
+            <div class="question">
+                7. It ___ a sunny day.
+                <br>
+                <input type="radio" name="question7" value="is"> is<br>
+                <input type="radio" name="question7" value="are"> are<br>
+                <input type="radio" name="question7" value="am"> am<br>
+            </div>
+
+            <div class="question">
+                8. I ___ ready for the test.
+                <br>
+                <input type="radio" name="question8" value="is"> is<br>
+                <input type="radio" name="question8" value="are"> are<br>
+                <input type="radio" name="question8" value="am"> am<br>
+            </div>
+
+            <div class="question">
+                9. They ___ excited about the trip.
+                <br>
+                <input type="radio" name="question9" value="is"> is<br>
+                <input type="radio" name="question9" value="are"> are<br>
+                <input type="radio" name="question9" value="am"> am<br>
+            </div>
+
+            <div class="question">
+                10. We ___ going to the park.
+                <br>
+                <input type="radio" name="question10" value="is"> is<br>
+                <input type="radio" name="question10" value="are"> are<br>
+                <input type="radio" name="question10" value="am"> am<br>
+            </div>
+        </form>
+
+        <button onclick="checkAnswers()">Submit Quiz</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            const answers = {
+                question1: "is",
+                question2: "are",
+                question3: "am",
+                question4: "is",
+                question5: "are",
+                question6: "are",
+                question7: "is",
+                question8: "am",
+                question9: "are",
+                question10: "are"
+            };
+
+            let correct = 0;
+            const quizForm = document.getElementById('quizForm');
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ""; 
+
+            for (let i = 1; i <= 10; i++) {
+                const userAnswer = quizForm[`question${i}`].value;
+                const correctAnswer = answers[`question${i}`];
+
+                if (userAnswer === correctAnswer) {
+                    correct++;
+                    resultDiv.innerHTML += `<p class="correct">Question ${i}: Correct ✅</p>`;
+                } else {
+                    resultDiv.innerHTML += `<p class="incorrect">Question ${i}: Incorrect ❌ (Correct answer: '${correctAnswer}')</p>`;
+                }
+            }
+
+            resultDiv.innerHTML += `<p class="result">You got ${correct} out of 10 correct!</p>`;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - David Hipperdinger</title>
+    <link rel="stylesheet" href="styleaboutme.css"> 
+</head>
+<body>
+    <div class="navbar">
+        <a href="home.html" class="nav-item">🏠 Home</a>
+        <a href="videos.html" class="nav-item">🎥 Videos</a>
+        <a href="webresources.html" class="nav-item">🔗 Web Resources</a>
+        <a href="quiz.html" class="nav-item">✏️ Mini Quiz</a>
+        <a href="aboutme.html" class="nav-item">🧑‍💻 About Me</a> 
+    </div>
+
+    <div class="container">
+        <h1>About Me</h1>
+        <p>Hola, Me llamo David Hipperdinger. Tengo 29 años y soy profesor de Inglés. Esta página está destinada a crear un espacio de aprendizaje y de ayuda para todos aquellos interesados en la lengua inglesa.</p>
+
+        <h2>Contact Me</h2>
+        <form action="contact_submit" method="post">
+            <label for="name">Nombre:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Mensaje:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
