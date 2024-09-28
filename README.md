@@ -1,2 +1,4 @@
 # PreEntrega1+Hipperdinger
- Diseñoweb para coderhouse
+Buenas profe, aca el link de los wireframes
+
+https://whimsical.com/wireframe-DwWQtkYtBwYXivEUsi8NbX
